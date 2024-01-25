@@ -52,7 +52,6 @@ To set up UnstopFrontend locally, follow these steps:
       ```
    5. **Open a Pull Request**: Finally, submit your changes for review to be potentially merged into the main project.
 
-This section of the README.md provides a clear and structured guide for potential contributors to participate in enhancing the UnstopFrontend project.
 
 
    
