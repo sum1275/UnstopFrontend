@@ -17,7 +17,7 @@ UnstopFrontend is the frontend part of a train seat booking system, designed to 
 
 To set up UnstopFrontend locally, follow these steps:
 
-1. Clone the repository:
+1. **Clone the repository**:
    ```bash
    git clone https://github.com/sum1275/UnstopFrontend.git
 2. **Update apiUrl**:
