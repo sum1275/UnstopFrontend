@@ -20,3 +20,37 @@ To set up UnstopFrontend locally, follow these steps:
 1. Clone the repository:
    ```bash
    git clone https://github.com/sum1275/UnstopFrontend.git
+2. **Update apiUrl**:
+   In `src/app/core/services/seat-booking.service.ts`, update the `apiUrl` to point to your local server environment:
+   ```typescript
+   apiUrl = 'http://localhost:8084/';
+3. **Update apiUrl**:
+   In the `src/app/core/services/seat-booking.service.ts` file, update the `apiUrl` to point to your local server environment. This ensures that the application connects to the correct backend service while running locally.
+   ```typescript
+   apiUrl = 'http://localhost:8084/';
+4. **Start the Server**:
+   To initiate the application server, execute the following command in your terminal:
+   ```bash
+   ng serve
+5. **Contributing**:
+   Your contributions are essential to the development and improvement of the UnstopFrontend project. Here are the steps to contribute:
+
+   1. **Fork the Project**: Begin by creating your own copy of the project on GitHub.
+   2. **Create Your Feature Branch**: Start a new feature by using the command:
+      ```git
+      git checkout -b feature/AmazingFeature
+      ```
+   3. **Commit Your Changes**: After completing your feature, commit your changes with:
+      ```git
+      git commit -m 'Add some AmazingFeature'
+      ```
+   4. **Push to the Branch**: Upload your new feature to GitHub using:
+      ```git
+      git push origin feature/AmazingFeature
+      ```
+   5. **Open a Pull Request**: Finally, submit your changes for review to be potentially merged into the main project.
+
+This section of the README.md provides a clear and structured guide for potential contributors to participate in enhancing the UnstopFrontend project.
+
+
+   
