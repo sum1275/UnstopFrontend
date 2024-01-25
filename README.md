@@ -2,7 +2,7 @@
 # UnstopFrontend
 
 UnstopFrontend is the frontend part of a train seat booking system, designed to efficiently manage seat reservations in a train coach with a capacity of 80 seats.
-
+![UnstopFrontend Interface](https://ibb.co/mb5107F)
 ## Problem Statement
 
 1. The coach has 80 seats, with 7 seats per row except the last row which has 3 seats.
