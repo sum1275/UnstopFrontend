@@ -1,49 +1,50 @@
 <body>
 
-  <div class="movie-container">
-<div> <label>Pick number of Ticket : </label>
-  <select id="movie" [(ngModel)]="selectedTickets">
-    <option value="1">1</option>
-    <option value="2">2</option>
-    <option value="3">3</option>
-    <option value="4">4</option>
-    <option value="5">5</option>
-    <option value="6">6</option>
-    <option value="7">7</option>
-  </select></div>
-  <div><button (click)="bookTicket()">Book</button></div>
-   
-  </div>
+  <div class="container">
+    <header>
+      <h1 class="title">Seat Booking System</h1>
+    </header>
 
-  <ul class="showcase">
-    <li>
-      <div class="seat"></div>
-      <small>N/A</small>
-    </li>
-
-  
-    <li>
-      <div class="seat occupied"></div>
-      <small>Occupied</small>
-    </li>
-  </ul>
-
-  <div class="main-container">
-    <div class="screen">
-      <ng-container *ngFor="let seat of bookedSeat; let i = index;">
-        {{ seat.seat_no }}<span *ngIf="i < bookedSeat.length - 1">, </span>
-      </ng-container>
+    <div class="movie-container">
+      <div> 
+        <label>Pick number of Ticket : </label>
+        <select id="movie" [(ngModel)]="selectedTickets">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+        </select>
+      </div>
+      <div><button (click)="bookTicket()">Book</button></div>
     </div>
-    
-    <div class="row" *ngFor="let row of getRows()">
-      <div class="seat" *ngFor="let seat of getSeatsForRow(row)"
-           [ngClass]="{'occupied': seat.is_booked}">
-           <span class="seat-number">{{seat.seat_no}}</span>
+
+    <ul class="showcase">
+      <li>
+        <div class="seat"></div>
+        <small>N/A</small>
+      </li>
+      <li>
+        <div class="seat occupied"></div>
+        <small>Occupied</small>
+      </li>
+    </ul>
+
+    <div class="main-container">
+      <div class="screen">
+        <ng-container *ngFor="let seat of bookedSeat; let i = index;">
+          {{ seat.seat_no }}<span *ngIf="i < bookedSeat.length - 1">, </span>
+        </ng-container>
+      </div>
+
+      <div class="row" *ngFor="let row of getRows(); let rowIndex = index">
+        <div class="seat" *ngFor="let seat of getSeatsForRow(row); let seatIndex = index"
+             [ngClass]="{'occupied': seat.is_booked, 'last-row-seat': rowIndex === getRows().length - 1}">
+             <span class="seat-number">{{seat.seat_no}}</span>
+        </div>
       </div>
     </div>
   </div>
-  
-
-  
-
 </body>
